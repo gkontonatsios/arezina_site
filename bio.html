@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Βιογραφικό Σημείωμα</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+       /* Custom Styles */
+       body {
+            background-color: #f4f7fc;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        header {
+            background-color: #3a4f7a;
+        }
+
+        header .nav-link {
+            color: white;
+            margin-right: 15px;
+            transition: color 0.3s;
+        }
+
+        header .nav-link:hover {
+            color: #a8d0e6;
+        }
+
+        /* Carousel */
+        #heroCarousel .carousel-item {
+            height: 400px;
+        }
+
+        #heroCarousel .carousel-item:nth-child(1) {
+            background: linear-gradient(rgba(58, 79, 122, 0.7), rgba(58, 79, 122, 0.7)), 
+                        url('https://static.biano.gr/i/product/1020-1020/9e/20/27/b23970bab77763c4829d9977b6d6ab9ad7bf6c8a-eikona-monopati-pros-to-dasos-60x40.webp') 
+                        no-repeat center center/cover;
+            color: white;
+        }
+
+        #heroCarousel .carousel-item:nth-child(2) {
+            background-color: #f4f7fc;
+            color: #333;
+            padding: 20px;
+        }
+
+        .carousel-caption {
+            bottom: 50%;
+            transform: translateY(50%);
+        }
+
+        .btn-success {
+            background-color: #7ac142;
+            border-color: #7ac142;
+            transition: background-color 0.3s;
+        }
+
+        .btn-success:hover {
+            background-color: #6fa13a;
+            border-color: #6fa13a;
+        }
+
+        .card {
+            border: none;
+            background-color: #ffffff;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-title {
+            color: #333;
+        }
+
+        footer {
+            background-color: #2d3e50;
+            color: white;
+        }
+
+        footer .social-icons a {
+            color: white;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        footer .social-icons a:hover {
+            color: #a8d0e6;
+        }
+
+        section {
+            padding: 60px 0;
+        }
+
+        /* Contact Info in Carousel */
+        .contact-info-slide {
+            padding: 20px;
+        }
+
+        .contact-info-slide h3 {
+            margin-top: 20px;
+            margin-bottom: 15px;
+        }
+
+        .contact-info-slide p {
+            margin-bottom: 5px;
+        }
+
+        /* Modal Styles */
+        .modal-content {
+            border-radius: 15px;
+        }
+
+        .modal-header {
+            background-color: #4a90e2;
+            color: white;
+            border-bottom: none;
+        }
+
+        .modal-footer {
+            border-top: none;
+        }
+
+        .modal-body h3 {
+            margin-top: 20px;
+            margin-bottom: 15px;
+        }
+
+        .modal-body p {
+            margin-bottom: 5px;
+        }
+        nav ul {
+        background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+        padding: 10px 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        list-style-type: none;
+        display: flex;
+        gap: 15px;
+        margin: 0;
+        animation: slideIn 0.8s ease-out; /* Slide-in animation */
+    }
+
+    nav ul li {
+        display: inline;
+    }
+
+    nav .nav-link {
+        color: #3a4f7a; /* Dark blue text */
+        text-decoration: none;
+        font-weight: bold;
+        transition: all 0.3s ease; /* Smooth transition */
+    }
+
+    nav .nav-link:hover {
+        color: white;
+        background-color: #3a4f7a;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+
+    /* Slide-in animation */
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateX(-50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    </style>
+</head>
+<body>
+
+<header class="py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <!-- Navigation Menu -->
+            <nav>
+                <ul>
+                    <li><a class="nav-link" href="index.html">Αρχική</a></li>
+                    <li><a class="nav-link" href="bio.html">Βιογραφικό</a></li>
+                    <!-- <li><a class="nav-link" href="#services">Υπηρεσίες</a></li>
+                    <li><a class="nav-link" href="#contact">Επικοινωνία</a></li> -->
+                </ul>
+            </nav>
+            <!-- Logo -->
+            <h1 class="logo mb-0 text-white text-end">Αρεζίνα Ασωμάτου, MD, MSc</h1>
+        </div>
+    </header>
+
+   <!-- Main Content -->
+   <div class="container my-5">
+    <h1 class="text-center mb-5">Βιογραφικό</h1>
+    <div>
+        <div class="p-4">
+            <p>
+                Η Αρεζίνα Ασωμάτου αποφοίτησε από την Ιατρική Σχολή του Πανεπιστημίου Αθηνών το 2006. Ξεκίνησε την καριέρα της ως αγροτική γιατρός, εργαζόμενη στο Γενικό Νοσοκομείο Μολάων και στο Κέντρο Υγείας Νεάπολης. Στη συνέχεια, ολοκλήρωσε την ειδικότητα της Ψυχιατρικής στο ΓΝΝΘΑ "Η ΣΩΤΗΡΙΑ".
+                </p>
+                <p>
+                    Μετά την απόκτηση της ειδικότητας, εργάστηκε ως επικουρική επιμελήτρια ψυχίατρος στο Κέντρο Υγείας Καλλιθέας. Σήμερα, κατέχει τη θέση της επιμελήτριας Α' Ψυχιάτρου στην Ψυχιατρική Κλινική του Γενικού Νοσοκομείου Άργους - Νοσηλευτικής Μονάδας Άργους. Στο πλαίσιο της θέσης αυτής, έχει αποκτήσει πολύτιμη εμπειρία στη διάγνωση και αντιμετώπιση ψυχικών διαταραχών.
+                </p>
+                <p>
+                    Επιπλέον, έχει δημοσιεύσει ερευνητικές εργασίες σε ελληνικά και διεθνή επιστημονικά συνέδρια και περιοδικά, συμβάλλοντας σημαντικά στην εξέλιξη του τομέα της ψυχιατρικής. Είναι κάτοχος μεταπτυχιακού διπλώματος με θέμα "Προαγωγή Ψυχικής Υγείας - Πρόληψη Ψυχιατρικών Διαταραχών" από το Εθνικό και Καποδιστριακό Πανεπιστήμιο Αθηνών, με βαθμό Άριστα.
+                </p>
+              
+    </div>
+  
+
+    <!-- Education -->
+    <section class="py-3 bg-light">
+        <div class="border rounded shadow">
+            <div class="bg-secondary text-white p-3 d-flex justify-content-between align-items-center" role="button" data-bs-toggle="collapse" data-bs-target="#education" aria-expanded="false" aria-controls="education">
+                <h5 class="mb-0">Εκπαίδευση</h5>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div id="education" class="collapse">
+                <div class="p-4">
+                    <ul>
+                        <li><strong>13/07/2016</strong>: Λήψη τίτλου ιατρικής ειδικότητας ψυχιάτρου</li>
+                        <li><strong>2014-2015</strong>: Μεταπτυχιακό Δίπλωμα Ειδίκευσης στην «Προαγωγή Ψυχικής Υγείας» , της Ιατρικής Σχολής του Πανεπιστημίου Αθηνών, με  Άριστα (9,73)</li>
+                        <li><strong>2000-2006</strong>: Εθνικό και Καποδιστριακό Πανεπιστήμιο Αθηνών, Πτυχίο Ιατρικής Σχολής με βαθμό Λίαν Καλώς (7,48)</li>
+                        <li><strong>2000</strong>: Απόφοιτη 1ου Ενιαίου Λυκείου Βόλου με βαθμό απολυτηρίου 19,7</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Experience -->
+    <section class="py-3 bg-light">
+        <div class="border rounded shadow">
+            <div class="bg-secondary text-white p-3 d-flex justify-content-between align-items-center" role="button" data-bs-toggle="collapse" data-bs-target="#experience" aria-expanded="false" aria-controls="experience">
+                <h5 class="mb-0">Επαγγελματική Δραστηριότητα</h5>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div id="experience" class="collapse">
+                <div class="p-4">
+                    <ul>
+                        <li><strong>18/06/2018 - Σήμερα:</strong> Επιμελήτρια Α’ Ψυχιατρικής στο Γενικό Νοσοκομείο Αργολίδας-Νοσηλευτική Μονάδα Άργους (Ψυχιατρικός Τομέας με Ψυχιατρική Κλινική 14 κλινών, Εξωτερικά Ιατρεία, Διασυνδετική-Συμβουλευτική Ψυχιατρική, Τμήμα Επειγόντων Περιστατικών, Κινητή Μονάδα Ψυχικής Υγείας, Κλινική χορήγησης LAIs-Depot).</li>
+                        <li><strong>14/02/2017 - 15/06/2018:</strong> Επικουρική Ψυχίατρος στo K.Y. Καλλιθέας.</li>
+                        <li><strong>09/2011 - 03/2016:</strong> Ειδικευόμενη Ψυχίατρος στο Γ.Ν.Ν.Θ.Α. «Η ΣΩΤΗΡΙΑ».</li>
+                        <li><strong>03/2016 - 10/2016:</strong> Παράταση της θητείας ως ειδικευόμενη Ψυχίατρος (από 13/07/2016 με τίτλο ειδικότητας Ψυχιατρικής) στον Ψυχιατρικό Τομέα του Γ.Ν.Ν.Θ.Α. «Η ΣΩΤΗΡΙΑ».</li>
+                        <li><strong>09/2014 - 09/2015:</strong> Εκπαίδευση στη Νευρολογική Κλινική του 251 Γ.Ν.Α., στα πλαίσια της ειδικότητας της ψυχιατρικής.</li>
+                        <li><strong>07/2009 - 09/2011:</strong> Εργασία στο Φαρμακείο της Ελαφονήσου Λακωνίας.</li>
+                        <li><strong>01/2008 - 07/2009:</strong> Εκπλήρωση υπηρεσίας υπαίθρου στο Κέντρο Υγείας Νεάπολης Λακωνίας.</li>
+                        <li><strong>10/2007 - 01/2008:</strong> Τρίμηνη εκπαίδευση (παθολογία, χειρουργική, καρδιολογία) στο Γ.Ν.-Κ.Υ. Μολάων.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications -->
+ <!-- Δημοσιεύσεις και Συνέδρια -->
+ <section class="py-3 bg-light">
+    <div class="border rounded shadow">
+        <div class="bg-secondary text-white p-3 d-flex justify-content-between align-items-center" role="button" data-bs-toggle="collapse" data-bs-target="#publications" aria-expanded="false" aria-controls="publications">
+            <h5 class="mb-0">Δημοσιεύσεις και Συνέδρια</h5>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div id="publications" class="collapse">
+            <div class="p-4">
+                <ul>
+                    <li><strong>11-13/10/2024:</strong> 1ο Πανελλήνιο Συνέδριο ΕΓΚΑΙΡΗΣ ΠΑΡΕΜΒΑΣΗΣ ΣΤΗΝ ΨΥΧΩΣΗ με e-poster: «Η σχιζοφρένεια ως μια "οικογενειακή υπόθεση"».</li>
+                    <li><strong>29/10-01/11/2020:</strong> 28ο Πανελλήνιο Συνέδριο Ψυχιατρικής (Διαδικτυακή διεξαγωγή) με e-poster: «Ψυχοπαθολογικές εκδηλώσεις σε φροντιστές παιδιών με διάχυτη αναπτυξιακή διαταραχή».</li>
+                    <li><strong>30/11-2/12/2018:</strong> 4ο Πανελλήνιο Συνέδριο Ψυχιατροδικαστικής (ΕΣΔΥ), με 4 e-posters:
+                        <ul>
+                            <li>«Παιδοκτονία και σχιζοφρένεια»</li>
+                            <li>«Τα εγκλήματα της μητροκτονίας και της πατροκτονίας στη σχιζοφρένεια»</li>
+                            <li>«Μητροκτονία: Παρουσίαση κλινικού περιστατικού»</li>
+                            <li>«Αντιμετώπιση του βίαιου και επιθετικού ασθενή στο Τμήμα Επειγόντων Περιστατικών»</li>
+                        </ul>
+                    </li>
+                    <li><strong>28-30/09/2018:</strong> Πολυθεματικό συνέδριο Αργολίδας, Ναύπλιο, εισηγήτρια στο Στρογγυλό Τραπέζι «Κοινωνικό στίγμα».</li>
+                    <li><strong>11-14/05/2017:</strong> 25ο Πανελλήνιο Ψυχιατρικό Συνέδριο, με ανακοινώσεις:
+                        <ul>
+                            <li>«Παράγοντες οικογενειακής επιβάρυνσης» [Δημοσιευμένο στο Ψυχιατρική 28, Παράρτημα 1]</li>
+                            <li>«Προσαρμογή της κλίμακας επιθετικότητας BAQ» [Ψυχιατρική 28, Παράρτημα 1]</li>
+                        </ul>
+                    </li>
+                    <li><strong>26-29/05/2016:</strong> 1ο Συνέδριο Βασισμένης Ψυχιατρικής, Κέρκυρα.</li>
+                    <li><strong>14-17/04/2016:</strong> 24ο Πανελλήνιο Ψυχιατρικό Συνέδριο, με στρογγυλή τράπεζα και δημοσιεύσεις.</li>
+                    <li><strong>13-15/02/2015:</strong> 1ο Πανελλήνιο Συνέδριο Ελληνικής Εταιρείας Έρευνας Αυτοκτονιών.</li>
+                    <li><strong>04/2014:</strong> 22ο Πανελλήνιο Συνέδριο Ψυχιατρικής, με πλήθος δημοσιεύσεων.</li>
+                    <li><strong>23/10-26/10/2013:</strong> ΙΙΙ International Congress on Dual Disorder, Barcelona.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
