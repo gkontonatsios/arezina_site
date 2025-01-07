@@ -5,11 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Αρεζίνα Ασωμάτου, MD, MSc</title>
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" 
+        rel="stylesheet"
+    >
     <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" 
+        rel="stylesheet"
+    >
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+    <link 
+        href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" 
+        rel="stylesheet"
+    >
 
     <style>
         /* Custom Styles */
@@ -21,13 +30,11 @@
         header {
             background-color: #3a4f7a;
         }
-
         header .nav-link {
             color: white;
             margin-right: 15px;
             transition: color 0.3s;
         }
-
         header .nav-link:hover {
             color: #a8d0e6;
         }
@@ -36,20 +43,17 @@
         #heroCarousel .carousel-item {
             height: 400px;
         }
-
         #heroCarousel .carousel-item:nth-child(1) {
             background: linear-gradient(rgba(58, 79, 122, 0.7), rgba(58, 79, 122, 0.7)), 
                         url('https://static.biano.gr/i/product/1020-1020/9e/20/27/b23970bab77763c4829d9977b6d6ab9ad7bf6c8a-eikona-monopati-pros-to-dasos-60x40.webp') 
                         no-repeat center center/cover;
             color: white;
         }
-
         #heroCarousel .carousel-item:nth-child(2) {
             background-color: #f4f7fc;
             color: #333;
             padding: 20px;
         }
-
         .carousel-caption {
             bottom: 50%;
             transform: translateY(50%);
@@ -60,7 +64,6 @@
             border-color: #7ac142;
             transition: background-color 0.3s;
         }
-
         .btn-success:hover {
             background-color: #6fa13a;
             border-color: #6fa13a;
@@ -71,12 +74,10 @@
             background-color: #ffffff;
             transition: transform 0.3s, box-shadow 0.3s;
         }
-
         .card:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
         }
-
         .card-title {
             color: #333;
         }
@@ -85,13 +86,11 @@
             background-color: #2d3e50;
             color: white;
         }
-
         footer .social-icons a {
             color: white;
             margin: 0 10px;
             transition: color 0.3s;
         }
-
         footer .social-icons a:hover {
             color: #a8d0e6;
         }
@@ -104,12 +103,10 @@
         .contact-info-slide {
             padding: 20px;
         }
-
         .contact-info-slide h3 {
             margin-top: 20px;
             margin-bottom: 15px;
         }
-
         .contact-info-slide p {
             margin-bottom: 5px;
         }
@@ -118,67 +115,61 @@
         .modal-content {
             border-radius: 15px;
         }
-
         .modal-header {
             background-color: #4a90e2;
             color: white;
             border-bottom: none;
         }
-
         .modal-footer {
             border-top: none;
         }
-
         .modal-body h3 {
             margin-top: 20px;
             margin-bottom: 15px;
         }
-
         .modal-body p {
             margin-bottom: 5px;
         }
-           /* Enhanced Menu Styles */
-    nav ul {
-        background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
-        padding: 10px 20px;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        list-style-type: none;
-        display: flex;
-        gap: 15px;
-        margin: 0;
-        animation: slideIn 0.8s ease-out; /* Slide-in animation */
-    }
 
-    nav ul li {
-        display: inline;
-    }
-
-    nav .nav-link {
-        color: #3a4f7a; /* Dark blue text */
-        text-decoration: none;
-        font-weight: bold;
-        transition: all 0.3s ease; /* Smooth transition */
-    }
-
-    nav .nav-link:hover {
-        color: white;
-        background-color: #3a4f7a;
-        padding: 5px 10px;
-        border-radius: 5px;
-    }
-
-    /* Slide-in animation */
-    @keyframes slideIn {
-        from {
-            opacity: 0;
-            transform: translateX(-50px);
+        /* Enhanced Menu Styles */
+        nav ul {
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+            padding: 10px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            list-style-type: none;
+            display: flex;
+            gap: 15px;
+            margin: 0;
+            animation: slideIn 0.8s ease-out; /* Slide-in animation */
         }
-        to {
-            opacity: 1;
-            transform: translateX(0);
+        nav ul li {
+            display: inline;
         }
-    }
+        nav .nav-link {
+            color: #3a4f7a; /* Dark blue text */
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease; /* Smooth transition */
+        }
+        nav .nav-link:hover {
+            color: white;
+            background-color: #3a4f7a;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        /* Slide-in animation */
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
     </style>
 </head>
 <body>
@@ -199,8 +190,6 @@
                     <li><a class="nav-link" href="#home">Αρχική</a></li>
                     <li class="nav-item"><a class="nav-link" href="bio.html">Βιογραφικό</a></li>
                     <li><a class="nav-link" href="contact.html">Επικοινωνία</a></li>
-                    <!-- <li><a class="nav-link" href="#services">Υπηρεσίες</a></li>
-                    <li><a class="nav-link" href="#contact">Επικοινωνία</a></li> -->
                 </ul>
             </nav>
             <!-- Logo (Name on the right) -->
@@ -213,17 +202,34 @@
         <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
             <!-- Indicators -->
             <div class="carousel-indicators">
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button 
+                    type="button" 
+                    data-bs-target="#heroCarousel" 
+                    data-bs-slide-to="0" 
+                    class="active" 
+                    aria-current="true" 
+                    aria-label="Slide 1"
+                ></button>
+                <button 
+                    type="button" 
+                    data-bs-target="#heroCarousel" 
+                    data-bs-slide-to="1" 
+                    aria-label="Slide 2"
+                ></button>
             </div>
+
             <!-- Carousel items -->
             <div class="carousel-inner">
                 <!-- First Slide -->
                 <div class="carousel-item active">
                     <div class="carousel-caption">
-                        <h1 class="mb-4">Ολιστική Φροντίδα Ψυχικής Υγείας για ένα Καλύτερο Αύριο</h1>
+                        <h1 class="mb-4">Ολιστική Φροντίδα Ψυχικής Υγείας</h1>
                         <p class="lead mb-4">Υποστηρίζουμε το ταξίδι σας για ψυχική ευημερία με συμπόνια και εξειδίκευση.</p>
-                        <button class="btn btn-success btn-lg" data-bs-toggle="modal" data-bs-target="#appointment-modal">
+                        <button 
+                            class="btn btn-success btn-lg" 
+                            data-bs-toggle="modal" 
+                            data-bs-target="#appointment-modal"
+                        >
                             <i class="fas fa-calendar-check"></i> Κλείστε Ραντεβού
                         </button>
                     </div>
@@ -233,106 +239,106 @@
                     <div class="contact-info-slide text-center">
                         <div class="row">
                             <div class="col-md-6">
-                                <iframe id="map-frame-carousel" src="" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                <iframe 
+                                    id="map-frame-carousel" 
+                                    src="" 
+                                    width="100%" 
+                                    height="300" 
+                                    style="border:0;" 
+                                    allowfullscreen="" 
+                                    loading="lazy"
+                                ></iframe>
                             </div>
                             <div class="col-md-6 d-flex flex-column justify-content-center align-items-center">
                                 <h3>Επικοινωνία</h3>
-                                <p><i class="fas fa-phone-alt"></i> Τηλέφωνο: <a href="#" id="phone1"></a> / <a href="#" id="phone2"></a></p>
-                                <p><i class="fas fa-map-marker-alt"></i> Διεύθυνση: <span id="address1"></span></p>
-                                <p><i class="fas fa-clock"></i> Ώρες Λειτουργίας:</p>
-                                
+                                <p>
+                                    <i class="fas fa-phone-alt"></i> 
+                                    Τηλέφωνο: 
+                                    <a href="#" id="phone1"></a> / 
+                                    <a href="#" id="phone2"></a>
+                                </p>
+                                <p>
+                                    <i class="fas fa-map-marker-alt"></i> 
+                                    Διεύθυνση: <span id="address1"></span>
+                                </p>
+                                <p>
+                                    <i class="fas fa-clock"></i> 
+                                    Ώρες Λειτουργίας:
+                                </p>
                                 <ul>
                                     <li>Τετάρτη: 18:00–21:00</li>
                                     <li>Πέμπτη: 10:00–14:00, 17:00–21:00</li>
                                     <li>Παρασκευή: 10:00–14:00, 17:00–21:00</li>
                                     <li>Σάββατο: 10:00–14:00</li> 
                                 </ul>
-
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- Controls -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <button 
+                class="carousel-control-prev" 
+                type="button" 
+                data-bs-target="#heroCarousel" 
+                data-bs-slide="prev"
+            >
+                <span 
+                    class="carousel-control-prev-icon" 
+                    aria-hidden="true"
+                ></span>
                 <span class="visually-hidden">Προηγούμενο</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <button 
+                class="carousel-control-next" 
+                type="button" 
+                data-bs-target="#heroCarousel" 
+                data-bs-slide="next"
+            >
+                <span 
+                    class="carousel-control-next-icon" 
+                    aria-hidden="true"
+                ></span>
                 <span class="visually-hidden">Επόμενο</span>
             </button>
         </div>
     </section>
 
     <!-- About Section -->
-    <!-- About Section with Collapsible Bio -->
-<!-- Collapsible Box for CV Section -->
-<!-- Collapsible Box with Preview for CV Section -->
-<!-- Collapsible Box with Grey Header for CV Section -->
-<section id="about" class="py-5 bg-light">
-    <div class="container">
-        <h2 class="text-center mb-4"></h2>
-        <div class="border rounded shadow">
-            <!-- Header (Collapsible Toggle) -->
-            <div class="bg-secondary text-white p-3 d-flex justify-content-between align-items-center" role="button" data-bs-toggle="collapse" data-bs-target="#bioContent" aria-expanded="false" aria-controls="bioContent">
-                <h5 class="mb-0">Δείτε το Βιογραφικό</h5>
-                <i class="fas fa-chevron-down"></i>
-            </div>
-            <!-- Collapsible Content -->
-            <div>
-                <div class="p-4">
-                    <p>
-                        Η Αρεζίνα Ασωμάτου αποφοίτησε από την Ιατρική Σχολή του Πανεπιστημίου Αθηνών το 2006. Ξεκίνησε την καριέρα της ως αγροτική γιατρός, εργαζόμενη στο Γενικό Νοσοκομείο Μολάων και στο Κέντρο Υγείας Νεάπολης.
-                    </p>
-                </div>
-                <div id="bioContent" class="collapse">
-                    <div class="p-4 pt-0">
-                        <p>
-                            Στη συνέχεια, ολοκλήρωσε την ειδικότητα της Ψυχιατρικής στο ΓΝΝΘΑ "Η ΣΩΤΗΡΙΑ".
-                        </p>
-                        <p>
-                            Μετά την απόκτηση της ειδικότητας, εργάστηκε ως επικουρική επιμελήτρια ψυχίατρος στο Κέντρο Υγείας Καλλιθέας. Σήμερα, κατέχει τη θέση της επιμελήτριας Α' Ψυχιάτρου στην Ψυχιατρική Κλινική του Γενικού Νοσοκομείου Άργους - Νοσηλευτικής Μονάδας Άργους. Στο πλαίσιο της θέσης αυτής, έχει αποκτήσει πολύτιμη εμπειρία στη διάγνωση και αντιμετώπιση ψυχικών διαταραχών.
-                        </p>
-                        <p>
-                            Επιπλέον, έχει δημοσιεύσει ερευνητικές εργασίες σε ελληνικά και διεθνή επιστημονικά συνέδρια και περιοδικά, συμβάλλοντας σημαντικά στην εξέλιξη του τομέα της ψυχιατρικής. Είναι κάτοχος μεταπτυχιακού διπλώματος με θέμα "Προαγωγή Ψυχικής Υγείας - Πρόληψη Ψυχιατρικών Διαταραχών" από το Εθνικό και Καποδιστριακό Πανεπιστήμιο Αθηνών, με βαθμό Άριστα.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-
-    <!-- Services Section -->
-    <section id="services" class="py-5">
+    <section id="about" class="py-5 bg-light">
         <div class="container">
-            <h2 class="text-center mb-5">Οι Υπηρεσίες μας</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card shadow-sm text-center">
-                        <div class="card-body">
-                            <h5 class="card-title">Κατάθλιψη & Άγχος</h5>
-                            <p class="card-text">Αποτελεσματικές θεραπείες για την αποκατάσταση της ισορροπίας και της χαράς.</p>
-                        </div>
-                    </div>
+            <h2 class="text-center mb-4"></h2>
+            <div class="border rounded shadow">
+                <!-- Header (Collapsible Toggle) -->
+                <div 
+                    class="bg-secondary text-white p-3 d-flex justify-content-between align-items-center" 
+                    role="button" 
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#bioContent" 
+                    aria-expanded="false" 
+                    aria-controls="bioContent"
+                >
+                    <h5 class="mb-0">Δείτε το Βιογραφικό</h5>
+                    <i class="fas fa-chevron-down"></i>
                 </div>
-                <div class="col-md-4">
-                    <div class="card shadow-sm text-center">
-                        <div class="card-body">
-                            <h5 class="card-title">Διαχείριση Στρες</h5>
-                            <p class="card-text">Πρακτικές στρατηγικές για μια πιο ήρεμη και συγκεντρωμένη ζωή.</p>
-                        </div>
+                <!-- Collapsible Content -->
+                <div>
+                    <div class="p-4">
+                        <p>
+                            Η Αρεζίνα Ασωμάτου αποφοίτησε από την Ιατρική Σχολή του Πανεπιστημίου Αθηνών το 2006. Ξεκίνησε την καριέρα της ως αγροτική γιατρός, εργαζόμενη στο Γενικό Νοσοκομείο Μολάων και στο Κέντρο Υγείας Νεάπολης.
+                        </p>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card shadow-sm text-center">
-                        <div class="card-body">
-                            <h5 class="card-title">Ψυχοθεραπεία</h5>
-                            <p class="card-text">Επιστημονικά τεκμηριωμένες προσεγγίσεις προσαρμοσμένες στις ανάγκες σας.</p>
+                    <div id="bioContent" class="collapse">
+                        <div class="p-4 pt-0">
+                            <p>
+                                Στη συνέχεια, ολοκλήρωσε την ειδικότητα της Ψυχιατρικής στο ΓΝΝΘΑ "Η ΣΩΤΗΡΙΑ".
+                            </p>
+                            <p>
+                                Μετά την απόκτηση της ειδικότητας, εργάστηκε ως επικουρική επιμελήτρια ψυχίατρος στο Κέντρο Υγείας Καλλιθέας. Σήμερα, κατέχει τη θέση της επιμελήτριας Α' Ψυχιάτρου στην Ψυχιατρική Κλινική του Γενικού Νοσοκομείου Άργους - Νοσηλευτικής Μονάδας Άργους. Στο πλαίσιο της θέσης αυτής, έχει αποκτήσει πολύτιμη εμπειρία στη διάγνωση και αντιμετώπιση ψυχικών διαταραχών.
+                            </p>
+                            <p>
+                                Επιπλέον, έχει δημοσιεύσει ερευνητικές εργασίες σε ελληνικά και διεθνή επιστημονικά συνέδρια και περιοδικά, συμβάλλοντας σημαντικά στην εξέλιξη του τομέα της ψυχιατρικής. Είναι κάτοχος μεταπτυχιακού διπλώματος με θέμα "Προαγωγή Ψυχικής Υγείας - Πρόληψη Ψυχιατρικών Διαταραχών" από το Εθνικό και Καποδιστριακό Πανεπιστήμιο Αθηνών, με βαθμό Άριστα.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -340,28 +346,181 @@
         </div>
     </section>
 
-    <!-- Modal for Appointment -->
-    <div id="appointment-modal" class="modal fade" tabindex="-1" aria-labelledby="appointmentModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
+    <!-- Services Section -->
+    <section id="services" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Οι Υπηρεσίες μας</h2>
 
-                <div class="modal-header">
-                    <h5 class="modal-title">Κλείστε Ραντεβού</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Κλείσιμο"></button>
+            <!-- First 6 Services (Visible) -->
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card shadow-sm text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Κατάθλιψη & Άγχος</h5>
+                            <p class="card-text">
+                                Αποτελεσματικές θεραπείες για την αποκατάσταση της ισορροπίας και της χαράς.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card shadow-sm text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Διαχείριση Στρες</h5>
+                            <p class="card-text">
+                                Πρακτικές στρατηγικές για μια πιο ήρεμη και συγκεντρωμένη ζωή.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card shadow-sm text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Ψυχοθεραπεία</h5>
+                            <p class="card-text">
+                                Επιστημονικά τεκμηριωμένες προσεγγίσεις προσαρμοσμένες στις ανάγκες σας.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- next row of visible services -->
+            <div class="row g-4 mt-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card shadow-sm text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Αντιμετώπιση Διαταραχής της Διάθεσης</h5>
+                            <p class="card-text">
+                                Πολύπλευρη προσέγγιση για τη βελτίωση της διάθεσης και της ποιότητας ζωής.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card shadow-sm text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Αντιμετώπιση Κρίσεων Πανικού</h5>
+                            <p class="card-text">
+                                Θεραπείες για την αντιμετώπιση και πρόληψη των κρίσεων πανικού.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card shadow-sm text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Αντιμετώπιση Σχιζοφρένειας</h5>
+                            <p class="card-text">
+                                Ολιστική προσέγγιση για τη διάγνωση και διαχείριση της σχιζοφρένειας.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Collapsible area for the rest of services -->
+            <div class="collapse" id="moreServices">
+                <!-- Hidden services start here -->
+                <div class="row g-4 mt-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card shadow-sm text-center">
+                            <div class="card-body">
+                                <h5 class="card-title">Απλή Επίσκεψη</h5>
+                                <p class="card-text">
+                                    Γενική αξιολόγηση και συμβουλευτική για τη βελτίωση της ψυχικής υγείας.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card shadow-sm text-center">
+                            <div class="card-body">
+                                <h5 class="card-title">Ειδική Επίσκεψη για ΑΜΕΑ - Ανέργους</h5>
+                                <p class="card-text">
+                                    Υπηρεσίες προσαρμοσμένες στις ανάγκες ΑΜΕΑ και ανέργων, με ειδικές τιμές.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card shadow-sm text-center">
+                            <div class="card-body">
+                                <h5 class="card-title">Ηλεκτρονική Συνταγογράφηση</h5>
+                                <p class="card-text">
+                                    Έκδοση και ανανέωση συνταγών μέσω ηλεκτρονικού συστήματος.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Single modal-body -->
+                <div class="row g-4 mt-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card shadow-sm text-center">
+                            <div class="card-body">
+                                <h5 class="card-title">Κατ' Οίκον Επίσκεψη</h5>
+                                <p class="card-text">
+                                    Δυνατότητα εξέτασης στον χώρο του ασθενούς.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card shadow-sm text-center">
+                            <div class="card-body">
+                                <h5 class="card-title">Πιστοποίηση / Βεβαιώσεις</h5>
+                                <p class="card-text">
+                                    Έκδοση ιατρικών πιστοποιητικών και βεβαιώσεων.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Show More / Show Less Button -->
+            <div class="text-center mt-4">
+                <button 
+                    class="btn btn-primary" 
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#moreServices" 
+                    aria-expanded="false" 
+                    aria-controls="moreServices"
+                >
+                    Περισσότερες Υπηρεσίες
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Appointment -->
+    <div 
+        id="appointment-modal" 
+        class="modal fade" 
+        tabindex="-1" 
+        aria-labelledby="appointmentModalLabel" 
+        aria-hidden="true"
+    >
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Κλείστε Ραντεβού</h5>
+                    <button 
+                        type="button" 
+                        class="btn-close" 
+                        data-bs-dismiss="modal" 
+                        aria-label="Κλείσιμο"
+                    ></button>
+                </div>
                 <div class="modal-body">
                     <!-- Calendly Inline Embed -->
                     <div 
-                      class="calendly-inline-widget" 
-                      data-url="https://calendly.com/asomatoua/60min"
-                      style="min-width:320px; height:630px;"
+                        class="calendly-inline-widget" 
+                        data-url="https://calendly.com/asomatoua/60min"
+                        style="min-width:320px; height:630px;"
                     >
                     </div>
-
                     <hr />
-
                     <div class="row mt-4">
                         <!-- Google Maps -->
                         <div class="col-md-6 mb-3">
@@ -373,26 +532,34 @@
                                 style="border:0; border-radius: 10px;" 
                                 allowfullscreen="" 
                                 loading="lazy"
-                            >
-                            </iframe>
+                            ></iframe>
                         </div>
                         <!-- Contact Information -->
                         <div class="col-md-6 d-flex flex-column justify-content-center align-items-start">
                             <h3>Επικοινωνία</h3>
-                            <p><i class="fas fa-phone-alt"></i> Τηλέφωνο: <a href="#" id="phone1-modal"></a> / <a href="#" id="phone2-modal"></a></p>
-                            <p><i class="fas fa-map-marker-alt"></i> Διεύθυνση: <span id="address-modal"></span></p>
-                            <p><i class="fas fa-clock"></i> Ώρες Λειτουργίας:</p>
-                                <ul>
-                                    <li>Τετάρτη: 18:00–21:00</li>
-                                    <li>Πέμπτη: 10:00–14:00, 17:00–21:00</li>
-                                    <li>Παρασκευή: 10:00–14:00, 17:00–21:00</li>
-                                    <li>Σάββατο: 10:00–14:00</li> 
-                                </ul>
+                            <p>
+                                <i class="fas fa-phone-alt"></i> 
+                                Τηλέφωνο: 
+                                <a href="#" id="phone1-modal"></a> / 
+                                <a href="#" id="phone2-modal"></a>
+                            </p>
+                            <p>
+                                <i class="fas fa-map-marker-alt"></i> 
+                                Διεύθυνση: <span id="address-modal"></span>
+                            </p>
+                            <p>
+                                <i class="fas fa-clock"></i> 
+                                Ώρες Λειτουργίας:
+                            </p>
+                            <ul>
+                                <li>Τετάρτη: 18:00–21:00</li>
+                                <li>Πέμπτη: 10:00–14:00, 17:00–21:00</li>
+                                <li>Παρασκευή: 10:00–14:00, 17:00–21:00</li>
+                                <li>Σάββατο: 10:00–14:00</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-                <!-- End single modal-body -->
-
             </div>
         </div>
     </div>
@@ -422,13 +589,13 @@
         // Map in Carousel
         document.getElementById('map-frame-carousel').src = mapEmbedURL;
 
-        // Map in Modal
+        // References for modal
         var mapFrameModal = document.getElementById('map-frame-modal');
+        var appointmentModal = document.getElementById('appointment-modal');
 
         // Load the map when the modal is shown
-        document.getElementById('appointment-modal').addEventListener('shown.bs.modal', function () {
+        appointmentModal.addEventListener('shown.bs.modal', function () {
             mapFrameModal.src = mapEmbedURL;
-
             // Insert contact info into modal
             document.getElementById('phone1-modal').textContent = phoneNumber1;
             document.getElementById('phone2-modal').textContent = phoneNumber2;
@@ -439,19 +606,21 @@
         });
 
         // When the modal is hidden, remove the map to prevent freezing
-        document.getElementById('appointment-modal').addEventListener('hidden.bs.modal', function () {
+        appointmentModal.addEventListener('hidden.bs.modal', function () {
             mapFrameModal.src = "";
         });
     </script>
 
     <!-- Calendly SCRIPT (required for the embedded widget) -->
     <script 
-      type="text/javascript" 
-      src="https://assets.calendly.com/assets/external/widget.js" 
-      async>
-    </script>
+        type="text/javascript" 
+        src="https://assets.calendly.com/assets/external/widget.js" 
+        async
+    ></script>
 
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script 
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    ></script>
 </body>
 </html>
