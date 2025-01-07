@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Επικοινωνία | Αρεζίνα Ασωμάτου, MD, MSc</title>
+
+    <!-- Bootstrap CSS -->
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" 
+        rel="stylesheet"
+    >
+    <!-- Font Awesome -->
+    <link 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" 
+        rel="stylesheet"
+    >
+    <!-- Google Fonts -->
+    <link 
+        href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" 
+        rel="stylesheet"
+    >
+
+    <style>
+        /* Custom Styles */
+        body {
+            background-color: #f4f7fc;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        header {
+            background-color: #3a4f7a;
+        }
+
+        header .nav-link {
+            color: white;
+            margin-right: 15px;
+            transition: color 0.3s;
+        }
+
+        header .nav-link:hover {
+            color: #a8d0e6;
+        }
+
+        .logo {
+            color: #fff;
+        }
+
+        .contact-header {
+            background-color: #3a4f7a;
+            color: #fff;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .contact-header h1 {
+            font-size: 2.5rem;
+        }
+
+        footer {
+            background-color: #2d3e50;
+            color: white;
+        }
+
+        footer .social-icons a {
+            color: white;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        footer .social-icons a:hover {
+            color: #a8d0e6;
+        }
+
+        /* Enhanced Menu Styles (same animation as main page) */
+        nav ul {
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+            padding: 10px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            list-style-type: none;
+            display: flex;
+            gap: 15px;
+            margin: 0;
+            animation: slideIn 0.8s ease-out; /* Slide-in animation */
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav .nav-link {
+            color: #3a4f7a; /* Dark blue text */
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease; /* Smooth transition */
+        }
+
+        nav .nav-link:hover {
+            color: white;
+            background-color: #3a4f7a;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Define Variables (Optional) -->
+    <script>
+        // You can adapt these as necessary
+        var phoneNumber1 = "210 6454419";
+        var phoneNumber2 = "6986435231";
+        var address = "Δημητρίου Σούτσου 24, Πλατεία Μαβίλη";
+        var mapEmbedURL = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3144.6826703593533!2d23.754370075360228!3d37.98453430005018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bd5385d69be1%3A0x793d761320362ab6!2sDim.%20Soutsou%2024%2C%20Athina%20115%2021!5e0!3m2!1sen!2sgr!4v1735758886767!5m2!1sen!2sgr";
+    </script>
+
+    <!-- Header -->
+    <header class="py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <!-- Navigation Menu -->
+            <nav>
+                <ul>
+                    <li><a class="nav-link" href="index.html">Αρχική</a></li>
+                    <li><a class="nav-link" href="bio.html">Βιογραφικό</a></li>
+                    <li><a class="nav-link" href="contact.html">Επικοινωνία</a></li>
+                </ul>
+            </nav>
+            <!-- Logo (Name on the right) -->
+            <h1 class="logo mb-0 text-end">
+                Αρεζίνα Ασωμάτου, MD, MSc
+            </h1>
+        </div>
+    </header>
+
+    <!-- Contact Header Section -->
+    <section class="contact-header">
+        <div class="container">
+            <h1>Επικοινωνία</h1>
+            <p class="lead">Είμαστε στη διάθεσή σας για ερωτήσεις, ραντεβού και πληροφορίες.</p>
+        </div>
+    </section>
+
+    <!-- Main Contact Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Contact Info & Map -->
+                <div class="col-md-6">
+                    <h2 class="mb-4">Στοιχεία Επικοινωνίας</h2>
+                    <p>
+                        <i class="fas fa-phone-alt"></i>
+                        Τηλέφωνο: 
+                        <a href="#" id="phone1"></a> /
+                        <a href="#" id="phone2"></a>
+                    </p>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i> Διεύθυνση: 
+                        <span id="address1"></span>
+                    </p>
+                    <p>
+                        <i class="fas fa-clock"></i> Ώρες Λειτουργίας: 
+                    </p>
+                    <ul>
+                        <li>Τετάρτη: 18:00–21:00</li>
+                        <li>Πέμπτη: 10:00–14:00, 17:00–21:00</li>
+                        <li>Παρασκευή: 10:00–14:00, 17:00–21:00</li>
+                        <li>Σάββατο: 10:00–14:00</li> 
+                    </ul>
+                    <!-- Map -->
+                    <iframe 
+                        id="map-frame" 
+                        src="" 
+                        width="100%" 
+                        height="300" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy"
+                    ></iframe>
+                </div>
+
+                <!-- Appointment Button (replaces the contact form) -->
+                <div class="col-md-6">
+                    <h2 class="mb-4">Κλείστε Ραντεβού</h2>
+                    <p class="mb-3">
+                        Χρησιμοποιήστε το online σύστημά μας για να κλείσετε ραντεβού γρήγορα και εύκολα.
+                    </p>
+                    <button 
+                        class="btn btn-success btn-lg" 
+                        data-bs-toggle="modal" 
+                        data-bs-target="#appointment-modal"
+                    >
+                        <i class="fas fa-calendar-check"></i> Κλείστε Ραντεβού
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Appointment (same as main page) -->
+    <div 
+        id="appointment-modal" 
+        class="modal fade" 
+        tabindex="-1" 
+        aria-labelledby="appointmentModalLabel" 
+        aria-hidden="true"
+    >
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: #4a90e2; color: #fff;">
+                    <h5 class="modal-title">Κλείστε Ραντεβού</h5>
+                    <button 
+                        type="button" 
+                        class="btn-close" 
+                        data-bs-dismiss="modal" 
+                        aria-label="Κλείσιμο"
+                    ></button>
+                </div>
+
+                <!-- Single modal-body -->
+                <div class="modal-body">
+                    <!-- Calendly Inline Embed -->
+                    <div 
+                      class="calendly-inline-widget" 
+                      data-url="https://calendly.com/asomatoua/60min"
+                      style="min-width:320px; height:630px;"
+                    >
+                    </div>
+
+                    <hr />
+
+                    <div class="row mt-4">
+                        <!-- Google Maps -->
+                        <div class="col-md-6 mb-3">
+                            <iframe 
+                                id="map-frame-modal" 
+                                src="" 
+                                width="100%" 
+                                height="300" 
+                                style="border:0; border-radius: 10px;" 
+                                allowfullscreen="" 
+                                loading="lazy"
+                            >
+                            </iframe>
+                        </div>
+                        <!-- Contact Information -->
+                        <div class="col-md-6 d-flex flex-column justify-content-center align-items-start">
+                            <h3>Επικοινωνία</h3>
+                            <p>
+                                <i class="fas fa-phone-alt"></i> Τηλέφωνο: 
+                                <a href="#" id="phone1-modal"></a> / 
+                                <a href="#" id="phone2-modal"></a>
+                            </p>
+                            <p>
+                                <i class="fas fa-map-marker-alt"></i> Διεύθυνση: 
+                                <span id="address-modal"></span>
+                            </p>
+                            <p>
+                                <i class="fas fa-clock"></i> Ώρες Λειτουργίας:
+                            </p>
+                            <ul>
+                                <li>Τετάρτη: 18:00–21:00</li>
+                                <li>Πέμπτη: 10:00–14:00, 17:00–21:00</li>
+                                <li>Παρασκευή: 10:00–14:00, 17:00–21:00</li>
+                                <li>Σάββατο: 10:00–14:00</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- End single modal-body -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-4">
+        <div class="container text-center">
+            <div class="social-icons mb-3">
+                <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+            </div>
+            <p class="mb-0">&copy; 2024 Αρεζίνα Ασωμάτου. Όλα τα δικαιώματα διατηρούνται.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript to load map and insert variables -->
+    <script>
+        // Insert phone numbers and address into the page
+        document.getElementById('phone1').textContent = phoneNumber1;
+        document.getElementById('phone2').textContent = phoneNumber2;
+        document.getElementById('address1').textContent = address;
+
+        document.getElementById('phone1').href = 'tel:' + phoneNumber1.replace(/\s+/g, '');
+        document.getElementById('phone2').href = 'tel:' + phoneNumber2.replace(/\s+/g, '');
+        
+        // Load the map in the main section
+        document.getElementById('map-frame').src = mapEmbedURL;
+
+        // Modal references
+        var mapFrameModal = document.getElementById('map-frame-modal');
+        var appointmentModal = document.getElementById('appointment-modal');
+
+        // When the modal is shown
+        appointmentModal.addEventListener('shown.bs.modal', function () {
+            mapFrameModal.src = mapEmbedURL;
+            // Insert contact info into modal
+            document.getElementById('phone1-modal').textContent = phoneNumber1;
+            document.getElementById('phone2-modal').textContent = phoneNumber2;
+            document.getElementById('address-modal').textContent = address;
+
+            document.getElementById('phone1-modal').href = 'tel:' + phoneNumber1.replace(/\s+/g, '');
+            document.getElementById('phone2-modal').href = 'tel:' + phoneNumber2.replace(/\s+/g, '');
+        });
+
+        // When the modal is hidden
+        appointmentModal.addEventListener('hidden.bs.modal', function () {
+            mapFrameModal.src = "";
+        });
+    </script>
+
+    <!-- Calendly SCRIPT (required for the embedded widget) -->
+    <script 
+      type="text/javascript" 
+      src="https://assets.calendly.com/assets/external/widget.js" 
+      async
+    ></script>
+
+    <!-- Bootstrap JS -->
+    <script 
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js">
+    </script>
+</body>
+</html>
