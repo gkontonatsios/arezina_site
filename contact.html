@@ -118,11 +118,17 @@
 <body>
     <!-- Define Variables (Optional) -->
     <script>
-        // You can adapt these as necessary
+        // Athens clinic variables
         var phoneNumber1 = "210 6454419";
         var phoneNumber2 = "6986435231";
         var address = "Δημητρίου Σούτσου 24, Πλατεία Μαβίλη";
         var mapEmbedURL = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3144.6826703593533!2d23.754370075360228!3d37.98453430005018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bd5385d69be1%3A0x793d761320362ab6!2sDim.%20Soutsou%2024%2C%20Athina%20115%2021!5e0!3m2!1sen!2sgr!4v1735758886767!5m2!1sen!2sgr";
+
+        // Thiva clinic variables (placeholders – adjust as needed)
+        var phoneNumber1_Thiva = "210 6454419";
+        var phoneNumber2_Thiva = "6986435231";
+        var addressThiva = "Οδός Παράδειγμα 12, Θήβα";
+        var mapEmbedURLThiva = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3130.2808628504235!2d23.315981276323868!3d38.31932638060503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a0ff5115c59565%3A0x3b37347666651474!2sMedical%20Clinics!5e0!3m2!1sen!2sgr!4v1751879233968!5m2!1sen!2sgr";
     </script>
 
     <!-- Header -->
@@ -151,13 +157,13 @@
         </div>
     </section>
 
-    <!-- Main Contact Section -->
+    <!-- === ATHENS CLINIC SECTION === -->
     <section class="py-5">
         <div class="container">
             <div class="row g-5">
                 <!-- Contact Info & Map -->
                 <div class="col-md-6">
-                    <h2 class="mb-4">Στοιχεία Επικοινωνίας</h2>
+                    <h2 class="mb-4">Ιατρείο Αθήνας</h2>
                     <p>
                         <i class="fas fa-phone-alt"></i>
                         Τηλέφωνο: 
@@ -184,14 +190,14 @@
                         src="" 
                         width="100%" 
                         height="300" 
-                        style="border:0;" 
+                        style="border:0; border-radius:10px;" 
                         allowfullscreen="" 
                         loading="lazy"
                     ></iframe>
                 </div>
 
-                <!-- Appointment Button (replaces the contact form) -->
-                <div class="col-md-6">
+                <!-- Appointment Button -->
+                <div class="col-md-6 d-flex flex-column justify-content-center align-items-start">
                     <h2 class="mb-4">Κλείστε Ραντεβού</h2>
                     <p class="mb-3">
                         Χρησιμοποιήστε το online σύστημά μας για να κλείσετε ραντεβού γρήγορα και εύκολα.
@@ -204,6 +210,60 @@
                         <i class="fas fa-calendar-check"></i> Κλείστε Ραντεβού
                     </button>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- === THIVA CLINIC SECTION === -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Contact Info & Map -->
+                <div class="col-md-6">
+                    <h2 class="mb-4">Ιατρείο Θήβας</h2>
+                    <p>
+                        <i class="fas fa-phone-alt"></i>
+                        Τηλέφωνο: 
+                        <a href="#" id="phone1-thiva"></a> /
+                        <a href="#" id="phone2-thiva"></a>
+                    </p>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i> Διεύθυνση: 
+                        <span id="address-thiva"></span>
+                    </p>
+                    <p>
+                        <i class="fas fa-clock"></i> Ώρες Λειτουργίας: 
+                    </p>
+                    <ul>
+                        <li>Δευτέρα: 9:00–14:00, 16:00–19:00</li> 
+                        <li>Παρασκευή: 9:00–14:00, 16:00–19:00</li>
+                    </ul>
+                    <!-- Map -->
+                    <iframe 
+                        id="map-frame-thiva" 
+                        src="" 
+                        width="100%" 
+                        height="300" 
+                        style="border:0; border-radius:10px;" 
+                        allowfullscreen="" 
+                        loading="lazy"
+                    ></iframe>
+                </div>
+
+                <!-- Appointment Button (same modal) -->
+                <!-- <div class="col-md-6 d-flex flex-column justify-content-center align-items-start">
+                    <h2 class="mb-4">Κλείστε Ραντεβού</h2>
+                    <p class="mb-3">
+                        Κλείστε ραντεβού για το ιατρείο Θήβας μέσω του ίδιου συστήματος.
+                    </p>
+                    <button 
+                        class="btn btn-success btn-lg" 
+                        data-bs-toggle="modal" 
+                        data-bs-target="#appointment-modal"
+                    >
+                        <i class="fas fa-calendar-check"></i> Κλείστε Ραντεβού
+                    </button>
+                </div> -->
             </div>
         </div>
     </section>
@@ -298,25 +358,32 @@
 
     <!-- JavaScript to load map and insert variables -->
     <script>
-        // Insert phone numbers and address into the page
+        // === ATHENS ===
         document.getElementById('phone1').textContent = phoneNumber1;
         document.getElementById('phone2').textContent = phoneNumber2;
         document.getElementById('address1').textContent = address;
 
         document.getElementById('phone1').href = 'tel:' + phoneNumber1.replace(/\s+/g, '');
         document.getElementById('phone2').href = 'tel:' + phoneNumber2.replace(/\s+/g, '');
-        
-        // Load the map in the main section
+
         document.getElementById('map-frame').src = mapEmbedURL;
 
-        // Modal references
+        // === THIVA ===
+        document.getElementById('phone1-thiva').textContent = phoneNumber1_Thiva;
+        document.getElementById('phone2-thiva').textContent = phoneNumber2_Thiva;
+        document.getElementById('address-thiva').textContent = addressThiva;
+
+        document.getElementById('phone1-thiva').href = 'tel:' + phoneNumber1_Thiva.replace(/\s+/g, '');
+        document.getElementById('phone2-thiva').href = 'tel:' + phoneNumber2_Thiva.replace(/\s+/g, '');
+
+        document.getElementById('map-frame-thiva').src = mapEmbedURLThiva;
+
+        // === MODAL (default to Athens) ===
         var mapFrameModal = document.getElementById('map-frame-modal');
         var appointmentModal = document.getElementById('appointment-modal');
 
-        // When the modal is shown
         appointmentModal.addEventListener('shown.bs.modal', function () {
-            mapFrameModal.src = mapEmbedURL;
-            // Insert contact info into modal
+            mapFrameModal.src = mapEmbedURL; // default Athens
             document.getElementById('phone1-modal').textContent = phoneNumber1;
             document.getElementById('phone2-modal').textContent = phoneNumber2;
             document.getElementById('address-modal').textContent = address;
@@ -325,7 +392,6 @@
             document.getElementById('phone2-modal').href = 'tel:' + phoneNumber2.replace(/\s+/g, '');
         });
 
-        // When the modal is hidden
         appointmentModal.addEventListener('hidden.bs.modal', function () {
             mapFrameModal.src = "";
         });
